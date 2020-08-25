@@ -1,9 +1,22 @@
 import express from 'express';
+import mongoose from 'mongoose';
+import badyParser from 'body-parser'; // un outil pour convertir les informations entre la db et le serveur
 import routes from './src/routes/crmRoutes'; // importer les routes 
+import bodyParser from 'body-parser'; 
 
 
 const app = express();
 const PORT = 3000;
+
+// connection mongoose
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost/CRMdb'); // , {useMongoClient: true} non necessaire en mongoose 5.x
+
+// body-parser 
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(badyParser.json()); // conversion qu'il faut  
+
+
 
 routes(app); // Les routes de notre app !!
 
