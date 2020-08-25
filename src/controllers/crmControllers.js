@@ -27,3 +27,15 @@ export const getContacts = (req, res) => {
         res.json(contact);
     });
 }
+
+// methode GET avec id pour avoir une liste specifique 
+
+export const getContactwithID = (req, res) => {
+    
+    Contact.findById(req.params.contactId,(err, contact) => {
+        if(err) {
+            res.send(err);
+        };
+        res.json(contact);
+    });
+}
