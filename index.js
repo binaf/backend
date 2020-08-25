@@ -25,6 +25,8 @@ app.use(badyParser.json()); // conversion qu'il faut
 
 routes(app); // Les routes de notre app !!
 
+app.use(express.static('public'));
+
 app.get("/",(req, res) => {
     res.send(`serveur node et express sur le port ${PORT}`)
 }); // point de terminaison
