@@ -4,6 +4,7 @@ import {
     getContacts,
     getContactwithID,
     updateContact,
+    deleteContact,
 
 } from '../controllers/crmControllers';
 
@@ -27,8 +28,7 @@ const routes = (app) => {
     // Mise à jour contact
     .put(updateContact) 
     // supprimer le contact   
-    .delete((req, res) =>   
-        res.send('demande DELETE avec succès'));          
+    .delete(deleteContact);          
      
 }
 
