@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 
 export const ContactSchema = new Schema({
 
-    fistName: {
+    firstName: {
         type: String,
         required: "Entrer un prénom"
     },
@@ -17,7 +17,7 @@ export const ContactSchema = new Schema({
         type: String,
         //required: "Entrer une adresse mail"
     },
-    compagny: {
+    company: {
         type: String,
     },
     phone: {
