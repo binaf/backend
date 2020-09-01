@@ -6,7 +6,7 @@ import bodyParser from 'body-parser';
 
 
 const app = express();
-const PORT = 3000;
+const PORT = 8080;
 
 // connection mongoose
 mongoose.Promise = global.Promise;
@@ -33,7 +33,10 @@ app.get("/",(req, res) => {
 
 // Listen pour ecouter sur un port !!
 
-app.listen(PORT, () => 
-    console.log(`Votre serveur est sur le port ${PORT}`)
-);
+//app.listen(PORT, () => 
+  //  console.log(`Votre serveur est sur le port ${PORT}`)
+//);
+
+console.log('Le serveur tourne sur le port:',PORT);
+app.listen(PORT, '0.0.0.0');
 
