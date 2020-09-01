@@ -10,7 +10,7 @@ const PORT = 8080;
 
 // connection mongoose
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://u3rtewkgjxfok1foan9x:riCWs2Xmu3W2sOj99RJw@bchobwzfpwnohfj-mongodb.services.clever-cloud.com:27017/bchobwzfpwnohfj', {
+mongoose.connect('', {
 
      useNewUrlParser: true,
      useUnifiedTopology: true,
